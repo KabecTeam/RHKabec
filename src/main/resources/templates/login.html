@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Soluciones Kabec | SK</title>
+
+  <!-- Bootstrap core CSS  -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+  
+    <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
+
+  <!-- Google Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic"/>
+
+    <link href="#" th:href="@{/css/login.css}" rel="stylesheet" />
+    <link href="#" th:href="@{/css/style.css}" rel="stylesheet" />  
+    
+  </head>
+ 
+  <body class="hold-transition login-page">
+<div class="login-box">
+  </div>
+    <div class="login-box-body">
+      <form class="form-signin" th:action="@{/logincheck}" method="POST">
+      <div class="form-group has-feedback">
+      <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+      <div class="login-logo">
+      <img src="/imgs/LOGO-KABEC-OFFICE-RGB.png" width="280" height="100">
+      </div>
+      <div class="form-group has-feedback">
+        <input type="text" class="form-control" placeholder="Usuario" style="color: #ffffff;background-color:#609;" 
+        name="username" id="username" required="required">        
+        <span class="glyphicon glyphicon-user form-control-feedback"></span> </div>
+        </div>  
+        <div class="form-group has-feedback">
+        <input type="password" class="form-control" placeholder="Password" style="color: #ffffff;background-color:#609;"
+        name="password" id="password" required="required"/>
+          <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+  		</div>
+  		
+  		<div class="row">
+        <div class="col-xs-6"></div>
+        <button class="btn btn-warning btn-block btn-flat" type="submit" style="color: #ffffff; background-color:#2E8B57;">
+        	<span class="glyphicon glyphicon-log-in" aria-hidden="true" ></span> Iniciar Sesión
+        </button>
+        <br>
+        <div th:if="${error !=null}"  class="alert alert-danger form-control" role="alert" >
+              Usuario Invalido</div>
+       <div th:if="${logout !=null}"  class="alert alert-info form-control" role="alert" >
+       Exito al salir!</div>
+        </div>
+      </form>
+</div>
+</body>
+</html>

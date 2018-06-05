@@ -1,0 +1,24 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2/02/2018, 05:16:03 PM
+    Author     : Sammy Guergachi <sguergachi at gmail.com>
+*/
+table
+
+{
+
+    border-collapse: collapse;
+
+}
+
+td, th /* Asigna un borde a las etiquetas td Y th */
+
+{
+
+    border: 1px solid black;
+
+}

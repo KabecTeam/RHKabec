@@ -1,0 +1,24 @@
+#container0{
+   
+    width: 620px;
+    height: 500px;
+    float: left;
+}
+
+#container1{
+    width: 600px;
+    height: 500px;
+    float: right;
+}
+
+#container2{
+    width: 600px;
+    height: 500px;
+    float: next;
+}
+#container3{
+    width: 600px;
+    height: 500px;
+    float: right;
+}
+
